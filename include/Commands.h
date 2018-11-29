@@ -24,7 +24,7 @@ int pwd(){
     }
     if(getcwd(CurrentDirectory,MAXBUF)==NULL){
         ERROR(CurrentDirectory,"UNABLE TO GET CURRENT DIRECTORY!");
-        return 0;
+        return 1;
     }
 }
 /*-----------------------------------*/
