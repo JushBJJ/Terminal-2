@@ -1,3 +1,4 @@
+#pragma once
 #include "Variables.h"
 #include "Commands.h"
 

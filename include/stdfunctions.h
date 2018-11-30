@@ -1,5 +1,5 @@
+#pragma once
 #include "Variables.h"
-
 int _NoNL(char *stream){
     for(int x=0;stream[x]!=0;x++){
         if(stream[x]=='\n'||stream[x]=='\r'){
@@ -10,12 +10,7 @@ int _NoNL(char *stream){
     return 0;
 }
 
-int ERROR(char *stream,char *Content){
-    printf("\x1b[1ERROR: \x1b[31m%s\x1b[0m\n");
-    return 0;
-}
-
-int _SetOutput(char *Output){
-    LastOut=Output;
+int PRINTERROR(char *Content){
+    printf("\x1b[1mERROR: \x1b[31m%s\x1b[0m\n",Content);
     return 0;
 }
