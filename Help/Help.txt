@@ -1,0 +1,18 @@
+Commands:
+pwd     [Prints out the current working directory]
+cd      [Changes Directory]
+lf      [Prints out the list of files and sub directories]
+echof   [Prints out contents of a file]
+edit    [Edit a file]
+    +------ open (Opens a file)
+    +------ edit (Edit a file)
+    +------ add (Add a new line starting from the line chosen)
+    +------ remove (removes a line including its contents)
+    +------ new (Make a new file)
+    +------ exit (exit the editor)
+rf      [Removes a file]
+md      [Makes a directory]
+rd      [Removes a directory]
+clear   [Clears the screen]
+exit    [Exits the terminal]
+help    [Shows this text]

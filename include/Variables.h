@@ -28,3 +28,7 @@ int y=0;
 /*Integers*/
 int RequiredArgs=0;
 int ReturnResult=0;
+
+/*echof.c*/
+char _fc[CHAR_MAX];
+FILE *echoffile;

@@ -7,19 +7,31 @@
 *       Command function info
 *
 *       Type: int
-*       Return: 0 on success 1 on function failed 2 on unknown command 3 on blank input 
+*       Return: 
+*           0 success 
+*           1 failed 
+*           2 unknown command 
+*           3 blank input 
 *
 ******************************************/
 #include "../Commands/pwd.c"
 #include "../Commands/cd.c"
 #include "../Commands/lf.c"
+#include "../Commands/echof.c"
+#include "../Commands/edit.c"
+#include "../Commands/rf.c"
+#include "../Commands/md.c"
+#include "../Commands/rd.c"
+#include "../Commands/clear.c"
+#include "../Commands/exit.c"
+#include "../Commands/help.c"
 /*-----------------------------------*/
 struct Commands{
     char    *Call;
     int     (*Command)();
 };
 struct Commands List[]={
-    {"pwd",pwd},{"cd",cd},{"lf",lf},
+    {"pwd",pwd},{"cd",cd},{"lf",lf},{"echof",echof},{"edit",edit},{"rf",rf},{"md",md},{"rd",rd},{"clear",clear},{"exit",EXITTERMINAL},{"help",help},
 };
 enum{AOC=sizeof(List)/sizeof(List[0])};
 
