@@ -20,7 +20,7 @@ Linux support will come soon when I think it is ready.
 
 1. Make sure gcc is installed in your linux distro; Type in "gcc -v" and the version of gcc should be outputted
 
-2. Go to the terminal 2 directory (ie. Terminal2 may be in /home/YOURUSERNAME/Terminal2)
+2. Go to the terminal 2 directory (ie. Terminal2 may be in $HOME/Terminal2/linux/Terminal2)
 
 3. type in "gcc Terminal2.c -o Terminal2"
 
