@@ -1,5 +1,5 @@
 #include "../include/sysincludes.h"
-#include "../include/variables.h"
+#include "../include/Variables.h"
 
 int clear(){
     for(x=0;x<100;x++){

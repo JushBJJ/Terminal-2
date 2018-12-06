@@ -1,7 +1,10 @@
 #include "../include/sysincludes.h"
+#include "../include/Variables.h"
 
 int md(char *DirectoryName){
-    if(mkdir(DirectoryName)==0){
+    char DN[10000];
+    sprintf(DN,"%s",DirectoryName);
+    if(mkdir(DN,ACCESSPERMS)==0){
         return 0;
     }
     else{

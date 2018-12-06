@@ -1,16 +1,12 @@
 /*************
  * Imported from https://github.com/JushBJJ/Edit
  * ***********/
-
-#include <windows.h>
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
 #include <stdbool.h>
 #include <unistd.h>
 #include <stdlib.h>
-#define ENABLE_VIRTUAL_TERMINAL_PROCESSING 0x0004
-CONSOLE_SCREEN_BUFFER_INFO TerminalBuffer;
 static char Input[CHAR_MAX];
 static char *EDITCommand;
 static char *EDITArgument;
@@ -51,11 +47,6 @@ enum{AmountOfCommands=sizeof(_EDITList)/sizeof(_EDITList[0])};
 int edit(){
     printf("Loading...\n");
     _SetLastError("");
-    HANDLE _OUTOPTION=GetStdHandle(STD_OUTPUT_HANDLE);
-    static DWORD _Mode=0;
-    GetConsoleMode(_OUTOPTION,&_Mode);
-    _Mode|=ENABLE_VIRTUAL_TERMINAL_PROCESSING;
-    SetConsoleMode(_OUTOPTION,_Mode);
     for(;;){
         if(exitYes==true){
             goto EDITEXIT;
@@ -109,8 +100,8 @@ int _RemoveLine(){
     Line=atoi(Input);
     int x=0;
     /*------------*/
-    char TempFileName[CHAR_MAX];
-    char Contents[CHAR_MAX];
+    unsigned char TempFileName[10000];
+    unsigned char Contents[10000];
     sprintf(TempFileName,"%s.temp",FileName);
     FILE *tempfile=fopen(TempFileName,"w");
     __read=fopen(FileName,"r");
@@ -150,9 +141,9 @@ int _AddLine(){
     _SetLastError("File Line: ");
     reprint();
     /*-------------------------*/
-    char TempFileName[CHAR_MAX];
-    char Input[CHAR_MAX];
-    char Contents[CHAR_MAX];
+    char TempFileName[10000];
+    char Input[10000];
+    char Contents[10000];
     int Line=0;
     int start=0;
     sprintf(TempFileName,"%s_temp.temp",FileName);
@@ -230,9 +221,9 @@ int _EditFile(){
     fgets(Input,sizeof(Input),stdin);
     printf("Contents: %s\tLine: %d\n",Input,intinput);
     /*-------------------------*/
-    char FileContents[CHAR_MAX];
-    char TempFileComtents[CHAR_MAX];
-    char TempFileName[CHAR_MAX];
+    char FileContents[10000];
+    char TempFileComtents[10000];
+    char TempFileName[10000];
     int x=0;
     sprintf(TempFileName,"%s.temp",FileName);
     FILE *WriteToTempFile;

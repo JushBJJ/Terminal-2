@@ -4,11 +4,6 @@
 #include "include/stdfunctions.h"
 
 int main(){
-    HANDLE _OUTOPTION=GetStdHandle(STD_OUTPUT_HANDLE);
-    static DWORD _Mode=0;
-    GetConsoleMode(_OUTOPTION,&_Mode);
-    _Mode|=ENABLE_VIRTUAL_TERMINAL_PROCESSING;
-    SetConsoleMode(_OUTOPTION,_Mode);
     printf("\x1b[0m");
     printf("================\n");
     printf("Terminal 1.0.2\n");
