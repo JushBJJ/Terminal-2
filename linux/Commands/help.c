@@ -19,7 +19,8 @@ int help(){
             "rd      [Removes a directory]\n"
             "clear   [Clears the screen]\n"
             "exit    [Exits the terminal]\n"
-            "help    [Shows this text])\n");
+            "help    [Shows this text]\n"
+	    "movf    [Moves a file to specified directory]\n");
     return 0;
 }
 
@@ -40,4 +41,6 @@ md      [Makes a directory]
 rd      [Removes a directory]
 clear   [Clears the screen]
 exit    [Exits the terminal]
-help    [Shows this text]*/
+help    [Shows this text]
+movf 	[Moves a file to specified directory]
+*/

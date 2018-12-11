@@ -25,13 +25,14 @@
 #include "../Commands/clear.c"
 #include "../Commands/exit.c"
 #include "../Commands/help.c"
+#include "../Commands/movf.c"
 /*-----------------------------------*/
 struct Commands{
     char    *Call;
     int     (*Command)();
 };
 struct Commands List[]={
-    {"pwd",pwd},{"cd",cd},{"lf",lf},{"echof",echof},{"edit",edit},{"rf",rf},{"md",md},{"rd",rd},{"clear",clear},{"exit",EXITTERMINAL},{"help",help},
+    {"pwd",pwd},{"cd",cd},{"lf",lf},{"echof",echof},{"edit",edit},{"rf",rf},{"md",md},{"rd",rd},{"clear",clear},{"exit",EXITTERMINAL},{"help",help},{"movf",movf},
 };
 enum{AOC=sizeof(List)/sizeof(List[0])};
 
