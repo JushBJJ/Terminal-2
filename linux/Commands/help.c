@@ -20,7 +20,8 @@ int help(){
             "clear   [Clears the screen]\n"
             "exit    [Exits the terminal]\n"
             "help    [Shows this text]\n"
-	    "movf    [Moves a file to specified directory]\n");
+	    "movf    [Moves a file to specified directory]\n"
+	    "mf	     [Makes a file]\n");
     return 0;
 }
 
@@ -43,4 +44,5 @@ clear   [Clears the screen]
 exit    [Exits the terminal]
 help    [Shows this text]
 movf 	[Moves a file to specified directory]
+mf	[Makes a file]
 */
